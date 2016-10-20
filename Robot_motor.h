@@ -9,7 +9,15 @@ class Robot_motor{
 
 public:
 	Robot_motor(string,string,int,int,int,int,string);
+	//			name , serial, price, weight, consume, speed, describe
 
+	string get_name(){return name;}
+	string get_serial(){return serial;}
+	int get_price(){return price;}
+	int get_weight(){return weight;}
+	int get_consume(){return consume;}
+	int get_speed(){return speed;}
+	string get_describe(){return describe;}
 
 
 private:

@@ -7,9 +7,16 @@ using namespace std;
 class Robot_head{
 public:
 	Robot_head(string,string,int,int,string);
+	//			name, serial, price, weight, decribe.
 
-	void set_price(int);
-	void set_serial_num(string);
+
+	string get_name(){return name;}
+	string get_serial(){return serial_num;}
+	int get_price(){return price;}
+	int get_weight(){return weight;}
+	string get_describe(){return describe;}
+
+
 private:
 	string serial_num;
 	int price;

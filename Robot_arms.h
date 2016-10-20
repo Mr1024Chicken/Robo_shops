@@ -9,7 +9,7 @@ using namespace std;
 class Robot_arms{
 public:
 	Robot_arms();
-	Robot_arms(string,string,int,int,int,string); 
+	Robot_arms(string,string,int,int,int,string,int); 
 		      //name , serial, price , weight, energy consume, describe.
 	void set_price(int);
 	void set_serial(string);
@@ -24,6 +24,7 @@ public:
 	int get_weight(){return weight;}
 	string get_describe(){return describe;}
 	int get_consume(){return consume;}
+	int get_amount(){return amount;}
 private:
 	string name;
 	string serial_num;
@@ -31,6 +32,7 @@ private:
 	int weight; //kg
 	string describe;
 	int consume; //watts
+	int amount;
 };
 
 #endif

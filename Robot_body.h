@@ -1,35 +1,33 @@
-#include "Robot_arms.h"
+#include <iostream>
+#include <string>
+using namespace std;
+#ifndef Robot_body_H
+#define Robot_body_H
 
-Robot_arms::Robot_arms(string new_name, string new_seri, int newprice, int new_weight, int new_consume, string new_des){
-name = new_name;
-serial_num = new_seri;
-price = newprice;
-weight = new_weight;
-consume = new_consume;
-describe = new_des;
-}
+class Robot_body{
 
-void Robot_arms::set_price(int temp){
-	price =temp;
-}
+public:
+	Robot_body(string,string,int,int,int,string);
+			// name , serial , price, weight , battery slot 1-3, description.
+	//void set_serial_num(string);
+	//void set_batt_dur(int);
+	//void set_price(int);
+	string get_name(){return name;}
+	string get_serial(){return serial_num;}
+	int get_price(){return price;}
+	int get_weight(){return weight;}
+	int get_batt(){return batt_slot;}
+	string get_describe(){ return describe;}
 
-void Robot_arms::set_serial(string temp){
-	serial_num =temp;	
-}
+private:
+	string serial_num;
+	int price;
+	int batt_slot;  //battery slot 1-3
+	string name;
+	int weight;
+	string describe;
 
-void Robot_arms::set_name(string temp){
-	name =temp;
-}
+};
 
-void Robot_arms::set_weight(int temp){
-weight =temp;
-}
 
-void Robot_arms::set_consume(int temp){
-consume = temp;
-}
-
-void Robot_arms::set_describe(string temp){
-describe =temp;
-}
-
+#endif
